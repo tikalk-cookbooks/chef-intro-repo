@@ -1,0 +1,20 @@
+{
+  "name": "onemin",
+  "description": "",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+
+	"chef_client": {
+        	"interval": "30"
+	}
+  },
+  "chef_type": "role",
+ "run_list": [
+ 	"role[base]"
+  ],
+  "env_run_lists": {
+  }
+}
+

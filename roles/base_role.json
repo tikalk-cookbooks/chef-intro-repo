@@ -1,0 +1,34 @@
+{
+  "name": "base_role",
+  "description": "The base role for all chef client",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+  },
+  "chef_type": "role",
+  "run_list": [
+
+  ],
+  "env_run_lists": {
+	"_default" : [],
+	"prod" : [];
+	"dev" : [
+	  "role[base]",
+	  "recipe"[chef-client]",
+  }
+}
+
+
+
+ override_attributes(
+      "chef_client" => {
+        "init_style" => "init"
+      }
+    )
+    run_list(
+      "recipe[chef-client::delete_validation]",
+      "recipe[chef-client::config]",
+      "recipe[chef-client::service]"
+    )
+

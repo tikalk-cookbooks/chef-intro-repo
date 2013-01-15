@@ -1,0 +1,21 @@
+{
+  "name": "base",
+  "description": "",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+  },
+  "override_attributes": {
+	"chef_client": {
+        	"server_url": "http://csrv:4000"
+	}
+  },
+  "chef_type": "role",
+  "run_list": [
+        "recipe[ntp]",
+        "recipe[chef-client]",
+	"recipe[chef-client::delete_validation]"
+  ],
+  "env_run_lists": {
+  }
+}
+
