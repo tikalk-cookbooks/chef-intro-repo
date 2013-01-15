@@ -2,6 +2,7 @@
   "name": "prod",
   "description": "production environment - Stable, Fully tested!",
   "cookbook_versions": {
+	"chef-client": "= 2.1.6"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
