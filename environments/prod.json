@@ -9,6 +9,8 @@
   "default_attributes": {
   },
   "override_attributes": {
+	"ntp": {
+	"ntp_server": "172.20.20.1"
   }
 }
 
