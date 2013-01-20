@@ -1,12 +1,24 @@
 Description
 ===========
 
-Requirements
-============
+* A basic recipe which configures ntp client - for production use https://github.com/opscode/cookbooks/tree/master/ntp
 
 Attributes
 ==========
+* ntp[:servers] (applies to NTP Servers and Clients)
+
+  - Array, should be a list of upstream NTP public servers.  The NTP protocol
+    works best with at least 3 servers. 
 
 Usage
 =====
 
+* Create a role, and specify your ntp servers somthing like the following:
+ 
+name "base"
+default_attributes(
+  "ntp" => {
+    "servers" => ["0.pool.ntp.org", "1.pool.ntp.org"]
+  }
+)
+- I would recommend replacing them with your local ntp servers to save traffic from/to your datacenter
