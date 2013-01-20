@@ -1,0 +1,10 @@
+{
+  "name": "ntp",
+  "description": "A role which provides the ntp recipe",
+  },
+  "chef_type": "role",
+  "run_list": [
+        "recipe[ntp]",
+  ],
+}
+
