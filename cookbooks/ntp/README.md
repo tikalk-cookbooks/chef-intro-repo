@@ -15,10 +15,10 @@ Usage
 
 * Create a role, and specify your ntp servers somthing like the following:
  
-name "base"
-default_attributes(
-  "ntp" => {
-    "servers" => ["0.pool.ntp.org", "1.pool.ntp.org"]
-  }
-)
+    name "base"
+        default_attributes(
+        "ntp" => {
+          "servers" => ["0.pool.ntp.org", "1.pool.ntp.org"]
+        }
+    )
 - I would recommend replacing them with your local ntp servers to save traffic from/to your datacenter
