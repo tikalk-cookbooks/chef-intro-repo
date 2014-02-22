@@ -6,7 +6,7 @@
   },
   "override_attributes": {
 	"chef_client": {
-        	"server_url": "http://csrv:4000"
+        	"server_url": "http://192.168.56.101:443"
 	}
   },
   "chef_type": "role",
